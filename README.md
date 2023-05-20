@@ -6,6 +6,8 @@ Okay since we're going to use yfinance to get our tickers data, there is some th
 
 ![My Image](docs/yfinance/yfinance_data.png)
 
+Let's say you need to get data from the ticker UBER, from 5 days and interval of 2 minutes. you should use the argument period --> 5d and interval --> 2m
+
 ## To run the project follow the steps:
 
 ### First of all run the command below to generate the data.csv
