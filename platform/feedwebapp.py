@@ -3,25 +3,26 @@ import pandas as pd
 from libproperties import *
 
 def get_data():
-	dataset = pd.read_csv("/Users/gaba/codes/projects/taipy_feed/etc/data.csv")
+	dataset = pd.read_csv("/Users/gaba/codes/projects/taipy_feed/etc/ticker_data.csv")
 	return dataset
 
 data = get_data()
 properties_lines = bidask_line_graph()
 properties_bar = bidask_bar_graph()
+properties_candle = ticker_candle_graph()
 
 page = """
-# Bid and Ask ticks with difference
+# UBER Ticker info
 
-Data Real Time Line Chart:
-
+Data Yfinance Line Chart:
 <|{data}|chart|properties=properties_lines|>
-<|
-|>
-Data Real Time Bar Chart:
-<|
-|>
+
+Data Yfinance Bar Chart:
 <|{data}|chart|properties=properties_bar|>
+
+Data Yfinance Candlestick Chart:
+<|{data}|chart|properties=properties_candle|>
+
 """
 
 

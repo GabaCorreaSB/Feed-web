@@ -6,10 +6,10 @@
 def bidask_line_graph():
 	properties = {
 		"mode":"lines",
-		"x": "Time",
-		"y[1]":"Bid",
-		"y[2]":"Ask",
-		"y[3]":"Diff",
+		"x": "Datetime",
+		"y[1]":"High",
+		"y[2]":"Low",
+		"y[3]":"Close",
 		"color[1]":"blue",
 		"color[2]":"red",
 		"color[3]":"yellow"	
@@ -20,13 +20,25 @@ def bidask_line_graph():
 def bidask_bar_graph():
 	properties = {
 		"type":"bar",
-		"x":"Time",
-		"y[1]":"Bid",
-		"y[2]":"Ask",
-		"y[3]":"Diff",
+		"x":"Datetime",
+		"y[1]":"High",
+		"y[2]":"Low",
+		"y[3]":"Close",
 		"color[1]":"blue",
 		"color[2]":"red",
 		"color[3]":"yellow"
+		}
+
+	return properties
+
+def ticker_candle_graph():
+	properties = {
+		"type":"candlestick",
+		"x":"Datetime",
+		"open":"Open",
+		"close":"Close",
+		"low":"Low",
+		"high":"High"
 		}
 
 	return properties
