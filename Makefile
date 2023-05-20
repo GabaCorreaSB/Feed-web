@@ -12,7 +12,7 @@ cleandata:
 	rm -rf etc/data.csv
 
 gendatacsv:
-	python3.10 sbin/random_gen.py >> ${PWD}/etc/data.csv
+	python3.10 sbin/gen_ticker_data.py
 
 installreq:
 	pip install -r etc/requirements.txt
